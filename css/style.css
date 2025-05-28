@@ -1,0 +1,117 @@
+/* Paleta de colores:
+   Azul oscuro: #003366
+   Violeta intenso: #6A3D9A
+   Dorado: #FFD700
+   Gris claro: #F0F0F0
+   Blanco puro: #FFFFFF
+*/
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #F0F0F0;
+  color: #003366;
+}
+.container {
+  width: 90%;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header {
+  background-color: #FFFFFF;
+  color: #000000;
+  color: #FFFFFF;
+  padding: 1em 0;
+}
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  display: flex;
+  align-items: center;
+}
+.logo img {
+  height: 40px;
+}
+.brand-name {
+  font-size: 1.5em;
+  margin-left: 0.5em;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1em;
+  margin: 0;
+}
+nav a {
+  color: #000000;
+  text-decoration: none;
+}
+nav a:hover {
+  color: #6A3D9A;
+}
+.btn {
+  padding: 0.6em 1.2em;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+.primary-btn {
+  background-color: #003366;
+  color: #FFFFFF;
+}
+.primary-btn:hover {
+  background-color: #6A3D9A;
+}
+.secondary-btn {
+  background-color: #FFD700;
+  color: #003366;
+}
+.secondary-btn:hover {
+  opacity: 0.8;
+}
+.social {
+  display: flex;
+  gap: 1em;
+}
+.banner {
+  display: flex;
+  background-color: #000000;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: #FFFFFF;
+  padding: 2em 0;
+}
+.banner-content {
+  flex: 1;
+  padding: 1em;
+}
+.banner-content h1 {
+  font-size: 2.5em;
+}
+.banner-content p {
+  font-size: 1.2em;
+  color: #6A3D9A;
+}
+.banner-image {
+  flex: 1;
+  text-align: center;
+}
+.banner-image img {
+  max-width: 90%;
+  height: auto;
+  max-height: 400px;
+  border-radius: 8px;
+}
+footer {
+  background-color: #003366;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 1em 0;
+}
