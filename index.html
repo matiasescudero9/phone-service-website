@@ -1,52 +1,1593 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Phone Service Paraná</title>
-  <link rel="stylesheet" href="/phone-service-website/css/style.css" />
-</head>
+
+<!-- saved from url=(0074)https://4c6e6b4a-79a1-404f-8522-c9378a5293e5.dev13.app-preview.com/#inicio -->
+<html lang="en"><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+
+
+
+<meta content="Hostinger Horizons" name="generator"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Hostinger Horizons</title>
+<script type="module">
+window.onerror = (message, source, lineno, colno, errorObj) => {
+	const errorDetails = errorObj ? JSON.stringify({
+		name: errorObj.name,
+		message: errorObj.message,
+		stack: errorObj.stack,
+		source,
+		lineno,
+		colno,
+	}) : null;
+
+	window.parent.postMessage({
+		type: 'horizons-runtime-error',
+		message,
+		error: errorDetails
+	}, '*');
+};
+</script>
+
+<script type="module">
+const originalConsoleError = console.error;
+console.error = function(...args) {
+	originalConsoleError.apply(console, args);
+
+	let errorString = '';
+
+	for (let i = 0; i < args.length; i++) {
+		const arg = args[i];
+		if (arg instanceof Error) {
+			errorString = arg.stack || `${arg.name}: ${arg.message}`;
+			break;
+		}
+	}
+
+	if (!errorString) {
+		errorString = args.map(arg => typeof arg === 'object' ? JSON.stringify(arg) : String(arg)).join(' ');
+	}
+
+	window.parent.postMessage({
+		type: 'horizons-console-error',
+		error: errorString
+	}, '*');
+};
+</script>
+<script type="module">
+const originalFetch = window.fetch;
+
+window.fetch = function(...args) {
+	const url = args[0] instanceof Request ? args[0].url : args[0];
+
+	// Skip WebSocket URLs
+	if (url.startsWith('ws:') || url.startsWith('wss:')) {
+		return originalFetch.apply(this, args);
+	}
+
+	return originalFetch.apply(this, args)
+		.then(async response => {
+			const contentType = response.headers.get('Content-Type') || '';
+
+			// Exclude HTML document responses
+			const isDocumentResponse =
+				contentType.includes('text/html') ||
+				contentType.includes('application/xhtml+xml');
+
+			if (!response.ok && !isDocumentResponse) {
+					const responseClone = response.clone();
+					const errorFromRes = await responseClone.text();
+					const requestUrl = response.url;
+					console.error(`Fetch error from ${requestUrl}: ${errorFromRes}`);
+			}
+
+			return response;
+		})
+		.catch(error => {
+			if (!url.match(/.html?$/i)) {
+				console.error(error);
+			}
+
+			throw error;
+		});
+};
+</script>
+<style data-vite-dev-id="/home/u263147529/websites/djbKVbU5G/public_html/src/index.css" type="text/css">*, ::before, ::after {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+  --tw-contain-size:  ;
+  --tw-contain-layout:  ;
+  --tw-contain-paint:  ;
+  --tw-contain-style:  ;
+}
+
+::backdrop {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+  --tw-contain-size:  ;
+  --tw-contain-layout:  ;
+  --tw-contain-paint:  ;
+  --tw-contain-style:  ;
+}/*
+! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com
+*//*
+1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
+2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
+*/
+
+*,
+::before,
+::after {
+  box-sizing: border-box; /* 1 */
+  border-width: 0; /* 2 */
+  border-style: solid; /* 2 */
+  border-color: #e5e7eb; /* 2 */
+}
+
+::before,
+::after {
+  --tw-content: '';
+}
+
+/*
+1. Use a consistent sensible line-height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+3. Use a more readable tab size.
+4. Use the user's configured `sans` font-family by default.
+5. Use the user's configured `sans` font-feature-settings by default.
+6. Use the user's configured `sans` font-variation-settings by default.
+7. Disable tap highlights on iOS
+*/
+
+html,
+:host {
+  line-height: 1.5; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  -moz-tab-size: 4; /* 3 */
+  -o-tab-size: 4;
+     tab-size: 4; /* 3 */
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 4 */
+  font-feature-settings: normal; /* 5 */
+  font-variation-settings: normal; /* 6 */
+  -webkit-tap-highlight-color: transparent; /* 7 */
+}
+
+/*
+1. Remove the margin in all browsers.
+2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
+*/
+
+body {
+  margin: 0; /* 1 */
+  line-height: inherit; /* 2 */
+}
+
+/*
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+3. Ensure horizontal rules are visible by default.
+*/
+
+hr {
+  height: 0; /* 1 */
+  color: inherit; /* 2 */
+  border-top-width: 1px; /* 3 */
+}
+
+/*
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+
+abbr:where([title]) {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+/*
+Remove the default font size and weight for headings.
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*
+Reset links to optimize for opt-in styling instead of opt-out.
+*/
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/*
+Add the correct font weight in Edge and Safari.
+*/
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/*
+1. Use the user's configured `mono` font-family by default.
+2. Use the user's configured `mono` font-feature-settings by default.
+3. Use the user's configured `mono` font-variation-settings by default.
+4. Correct the odd `em` font sizing in all browsers.
+*/
+
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; /* 1 */
+  font-feature-settings: normal; /* 2 */
+  font-variation-settings: normal; /* 3 */
+  font-size: 1em; /* 4 */
+}
+
+/*
+Add the correct font size in all browsers.
+*/
+
+small {
+  font-size: 80%;
+}
+
+/*
+Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+*/
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+3. Remove gaps between table borders by default.
+*/
+
+table {
+  text-indent: 0; /* 1 */
+  border-color: inherit; /* 2 */
+  border-collapse: collapse; /* 3 */
+}
+
+/*
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+3. Remove default padding in all browsers.
+*/
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-feature-settings: inherit; /* 1 */
+  font-variation-settings: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  font-weight: inherit; /* 1 */
+  line-height: inherit; /* 1 */
+  letter-spacing: inherit; /* 1 */
+  color: inherit; /* 1 */
+  margin: 0; /* 2 */
+  padding: 0; /* 3 */
+}
+
+/*
+Remove the inheritance of text transform in Edge and Firefox.
+*/
+
+button,
+select {
+  text-transform: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Remove default button styles.
+*/
+
+button,
+input:where([type='button']),
+input:where([type='reset']),
+input:where([type='submit']) {
+  -webkit-appearance: button; /* 1 */
+  background-color: transparent; /* 2 */
+  background-image: none; /* 2 */
+}
+
+/*
+Use the modern Firefox focus style for all focusable elements.
+*/
+
+:-moz-focusring {
+  outline: auto;
+}
+
+/*
+Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
+*/
+
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+/*
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+
+progress {
+  vertical-align: baseline;
+}
+
+/*
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/*
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+
+[type='search'] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/*
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to `inherit` in Safari.
+*/
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/*
+Add the correct display in Chrome and Safari.
+*/
+
+summary {
+  display: list-item;
+}
+
+/*
+Removes the default spacing and border for appropriate elements.
+*/
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+ol,
+ul,
+menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+Reset default styling for dialogs.
+*/
+dialog {
+  padding: 0;
+}
+
+/*
+Prevent resizing textareas horizontally by default.
+*/
+
+textarea {
+  resize: vertical;
+}
+
+/*
+1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
+2. Set the default placeholder color to the user's configured gray 400 color.
+*/
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  opacity: 1; /* 1 */
+  color: #9ca3af; /* 2 */
+}
+
+input::placeholder,
+textarea::placeholder {
+  opacity: 1; /* 1 */
+  color: #9ca3af; /* 2 */
+}
+
+/*
+Set the default cursor for buttons.
+*/
+
+button,
+[role="button"] {
+  cursor: pointer;
+}
+
+/*
+Make sure disabled buttons don't get the pointer cursor.
+*/
+:disabled {
+  cursor: default;
+}
+
+/*
+1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
+   This can trigger a poorly considered lint error in some tools but is included by design.
+*/
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block; /* 1 */
+  vertical-align: middle; /* 2 */
+}
+
+/*
+Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
+*/
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Make elements with the HTML hidden attribute stay hidden by default */
+[hidden]:where(:not([hidden="until-found"])) {
+  display: none;
+}
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 210 100% 50%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+  }
+  * {
+  border-color: hsl(var(--border));
+}
+  body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+    font-feature-settings: "rlig" 1, "calt" 1;
+}
+  html {
+    scroll-behavior: smooth;
+  }
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+@media (min-width: 1400px) {
+
+  .container {
+    max-width: 1400px;
+  }
+}
+.pointer-events-auto {
+  pointer-events: auto;
+}
+.fixed {
+  position: fixed;
+}
+.absolute {
+  position: absolute;
+}
+.relative {
+  position: relative;
+}
+.sticky {
+  position: sticky;
+}
+.right-2 {
+  right: 0.5rem;
+}
+.top-0 {
+  top: 0px;
+}
+.top-2 {
+  top: 0.5rem;
+}
+.z-50 {
+  z-index: 50;
+}
+.z-\[100\] {
+  z-index: 100;
+}
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+.mb-1 {
+  margin-bottom: 0.25rem;
+}
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+.mb-16 {
+  margin-bottom: 4rem;
+}
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+.mb-3 {
+  margin-bottom: 0.75rem;
+}
+.mb-4 {
+  margin-bottom: 1rem;
+}
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+.mb-8 {
+  margin-bottom: 2rem;
+}
+.ml-4 {
+  margin-left: 1rem;
+}
+.mr-2 {
+  margin-right: 0.5rem;
+}
+.mr-3 {
+  margin-right: 0.75rem;
+}
+.mt-1 {
+  margin-top: 0.25rem;
+}
+.mt-10 {
+  margin-top: 2.5rem;
+}
+.mt-4 {
+  margin-top: 1rem;
+}
+.block {
+  display: block;
+}
+.flex {
+  display: flex;
+}
+.inline-flex {
+  display: inline-flex;
+}
+.grid {
+  display: grid;
+}
+.hidden {
+  display: none;
+}
+.h-10 {
+  height: 2.5rem;
+}
+.h-11 {
+  height: 2.75rem;
+}
+.h-12 {
+  height: 3rem;
+}
+.h-4 {
+  height: 1rem;
+}
+.h-5 {
+  height: 1.25rem;
+}
+.h-8 {
+  height: 2rem;
+}
+.h-9 {
+  height: 2.25rem;
+}
+.max-h-screen {
+  max-height: 100vh;
+}
+.min-h-screen {
+  min-height: 100vh;
+}
+.w-10 {
+  width: 2.5rem;
+}
+.w-12 {
+  width: 3rem;
+}
+.w-4 {
+  width: 1rem;
+}
+.w-5 {
+  width: 1.25rem;
+}
+.w-full {
+  width: 100%;
+}
+.max-w-3xl {
+  max-width: 48rem;
+}
+.shrink-0 {
+  flex-shrink: 0;
+}
+.flex-grow {
+  flex-grow: 1;
+}
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+.flex-col {
+  flex-direction: column;
+}
+.flex-col-reverse {
+  flex-direction: column-reverse;
+}
+.items-start {
+  align-items: flex-start;
+}
+.items-center {
+  align-items: center;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.gap-1 {
+  gap: 0.25rem;
+}
+.gap-12 {
+  gap: 3rem;
+}
+.gap-4 {
+  gap: 1rem;
+}
+.gap-6 {
+  gap: 1.5rem;
+}
+.gap-8 {
+  gap: 2rem;
+}
+.space-x-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(1rem * var(--tw-space-x-reverse));
+  margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
+}
+.space-x-6 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(1.5rem * var(--tw-space-x-reverse));
+  margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
+.space-y-2 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
+}
+.space-y-3 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
+}
+.space-y-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+}
+.space-y-6 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
+}
+.space-y-8 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(2rem * var(--tw-space-y-reverse));
+}
+.overflow-hidden {
+  overflow: hidden;
+}
+.rounded-full {
+  border-radius: 9999px;
+}
+.rounded-lg {
+  border-radius: var(--radius);
+}
+.rounded-md {
+  border-radius: calc(var(--radius) - 2px);
+}
+.rounded-xl {
+  border-radius: 0.75rem;
+}
+.border {
+  border-width: 1px;
+}
+.border-t {
+  border-top-width: 1px;
+}
+.border-destructive {
+  border-color: hsl(var(--destructive));
+}
+.border-gray-300 {
+  --tw-border-opacity: 1;
+  border-color: rgb(209 213 219 / var(--tw-border-opacity, 1));
+}
+.border-gray-800 {
+  --tw-border-opacity: 1;
+  border-color: rgb(31 41 55 / var(--tw-border-opacity, 1));
+}
+.border-input {
+  border-color: hsl(var(--input));
+}
+.border-white {
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity, 1));
+}
+.bg-\[\#1d1d1f\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(29 29 31 / var(--tw-bg-opacity, 1));
+}
+.bg-\[\#2997ff\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(41 151 255 / var(--tw-bg-opacity, 1));
+}
+.bg-\[\#f5f5f7\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(245 245 247 / var(--tw-bg-opacity, 1));
+}
+.bg-background {
+  background-color: hsl(var(--background));
+}
+.bg-destructive {
+  background-color: hsl(var(--destructive));
+}
+.bg-primary {
+  background-color: hsl(var(--primary));
+}
+.bg-secondary {
+  background-color: hsl(var(--secondary));
+}
+.bg-transparent {
+  background-color: transparent;
+}
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+}
+.bg-gradient-to-r {
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+.from-\[\#000000\] {
+  --tw-gradient-from: #000000 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(0 0 0 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+.to-\[\#1d1d1f\] {
+  --tw-gradient-to: #1d1d1f var(--tw-gradient-to-position);
+}
+.p-1 {
+  padding: 0.25rem;
+}
+.p-4 {
+  padding: 1rem;
+}
+.p-6 {
+  padding: 1.5rem;
+}
+.p-8 {
+  padding: 2rem;
+}
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.py-12 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.py-20 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+.py-24 {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+.pr-8 {
+  padding-right: 2rem;
+}
+.pt-8 {
+  padding-top: 2rem;
+}
+.text-center {
+  text-align: center;
+}
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+.font-bold {
+  font-weight: 700;
+}
+.font-medium {
+  font-weight: 500;
+}
+.font-semibold {
+  font-weight: 600;
+}
+.italic {
+  font-style: italic;
+}
+.text-\[\#1d1d1f\] {
+  --tw-text-opacity: 1;
+  color: rgb(29 29 31 / var(--tw-text-opacity, 1));
+}
+.text-\[\#2997ff\] {
+  --tw-text-opacity: 1;
+  color: rgb(41 151 255 / var(--tw-text-opacity, 1));
+}
+.text-destructive-foreground {
+  color: hsl(var(--destructive-foreground));
+}
+.text-foreground\/50 {
+  color: hsl(var(--foreground) / 0.5);
+}
+.text-gray-300 {
+  --tw-text-opacity: 1;
+  color: rgb(209 213 219 / var(--tw-text-opacity, 1));
+}
+.text-gray-400 {
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity, 1));
+}
+.text-gray-500 {
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity, 1));
+}
+.text-gray-600 {
+  --tw-text-opacity: 1;
+  color: rgb(75 85 99 / var(--tw-text-opacity, 1));
+}
+.text-gray-700 {
+  --tw-text-opacity: 1;
+  color: rgb(55 65 81 / var(--tw-text-opacity, 1));
+}
+.text-primary {
+  color: hsl(var(--primary));
+}
+.text-primary-foreground {
+  color: hsl(var(--primary-foreground));
+}
+.text-secondary-foreground {
+  color: hsl(var(--secondary-foreground));
+}
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+.underline-offset-4 {
+  text-underline-offset: 4px;
+}
+.opacity-0 {
+  opacity: 0;
+}
+.opacity-90 {
+  opacity: 0.9;
+}
+.shadow-2xl {
+  --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.shadow-lg {
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.shadow-md {
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.shadow-sm {
+  --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.shadow-xl {
+  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.outline {
+  outline-style: solid;
+}
+.ring-offset-background {
+  --tw-ring-offset-color: hsl(var(--background));
+}
+.filter {
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+.transition {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+.transition-colors {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+.transition-opacity {
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+.transition-shadow {
+  transition-property: box-shadow;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+.duration-300 {
+  transition-duration: 300ms;
+}
+.ease-in-out {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+@keyframes enter {
+
+  from {
+    opacity: var(--tw-enter-opacity, 1);
+    transform: translate3d(var(--tw-enter-translate-x, 0), var(--tw-enter-translate-y, 0), 0) scale3d(var(--tw-enter-scale, 1), var(--tw-enter-scale, 1), var(--tw-enter-scale, 1)) rotate(var(--tw-enter-rotate, 0));
+  }
+}
+@keyframes exit {
+
+  to {
+    opacity: var(--tw-exit-opacity, 1);
+    transform: translate3d(var(--tw-exit-translate-x, 0), var(--tw-exit-translate-y, 0), 0) scale3d(var(--tw-exit-scale, 1), var(--tw-exit-scale, 1), var(--tw-exit-scale, 1)) rotate(var(--tw-exit-rotate, 0));
+  }
+}
+.duration-300 {
+  animation-duration: 300ms;
+}
+.ease-in-out {
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Animations */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.last\:mb-0:last-child {
+  margin-bottom: 0px;
+}
+
+.hover\:bg-\[\#0071e3\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 113 227 / var(--tw-bg-opacity, 1));
+}
+
+.hover\:bg-\[\#2997ff\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(41 151 255 / var(--tw-bg-opacity, 1));
+}
+
+.hover\:bg-accent:hover {
+  background-color: hsl(var(--accent));
+}
+
+.hover\:bg-destructive\/90:hover {
+  background-color: hsl(var(--destructive) / 0.9);
+}
+
+.hover\:bg-primary\/90:hover {
+  background-color: hsl(var(--primary) / 0.9);
+}
+
+.hover\:bg-secondary:hover {
+  background-color: hsl(var(--secondary));
+}
+
+.hover\:bg-secondary\/80:hover {
+  background-color: hsl(var(--secondary) / 0.8);
+}
+
+.hover\:bg-white:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+}
+
+.hover\:text-\[\#2997ff\]:hover {
+  --tw-text-opacity: 1;
+  color: rgb(41 151 255 / var(--tw-text-opacity, 1));
+}
+
+.hover\:text-accent-foreground:hover {
+  color: hsl(var(--accent-foreground));
+}
+
+.hover\:text-black:hover {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity, 1));
+}
+
+.hover\:text-foreground:hover {
+  color: hsl(var(--foreground));
+}
+
+.hover\:underline:hover {
+  text-decoration-line: underline;
+}
+
+.hover\:shadow-lg:hover {
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.focus\:opacity-100:focus {
+  opacity: 1;
+}
+
+.focus\:outline-none:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.focus\:ring-2:focus {
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+}
+
+.focus\:ring-\[\#2997ff\]:focus {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(41 151 255 / var(--tw-ring-opacity, 1));
+}
+
+.focus\:ring-ring:focus {
+  --tw-ring-color: hsl(var(--ring));
+}
+
+.focus\:ring-offset-2:focus {
+  --tw-ring-offset-width: 2px;
+}
+
+.focus-visible\:outline-none:focus-visible {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.focus-visible\:ring-2:focus-visible {
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+}
+
+.focus-visible\:ring-ring:focus-visible {
+  --tw-ring-color: hsl(var(--ring));
+}
+
+.focus-visible\:ring-offset-2:focus-visible {
+  --tw-ring-offset-width: 2px;
+}
+
+.disabled\:pointer-events-none:disabled {
+  pointer-events: none;
+}
+
+.disabled\:opacity-50:disabled {
+  opacity: 0.5;
+}
+
+.group:hover .group-hover\:opacity-100 {
+  opacity: 1;
+}
+
+.group.destructive .group-\[\.destructive\]\:border-destructive\/30 {
+  border-color: hsl(var(--destructive) / 0.3);
+}
+
+.group.destructive .group-\[\.destructive\]\:text-red-300 {
+  --tw-text-opacity: 1;
+  color: rgb(252 165 165 / var(--tw-text-opacity, 1));
+}
+
+.group.destructive .group-\[\.destructive\]\:hover\:border-destructive\/30:hover {
+  border-color: hsl(var(--destructive) / 0.3);
+}
+
+.group.destructive .group-\[\.destructive\]\:hover\:bg-destructive:hover {
+  background-color: hsl(var(--destructive));
+}
+
+.group.destructive .group-\[\.destructive\]\:hover\:text-destructive-foreground:hover {
+  color: hsl(var(--destructive-foreground));
+}
+
+.group.destructive .group-\[\.destructive\]\:hover\:text-red-50:hover {
+  --tw-text-opacity: 1;
+  color: rgb(254 242 242 / var(--tw-text-opacity, 1));
+}
+
+.group.destructive .group-\[\.destructive\]\:focus\:ring-destructive:focus {
+  --tw-ring-color: hsl(var(--destructive));
+}
+
+.group.destructive .group-\[\.destructive\]\:focus\:ring-red-400:focus {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(248 113 113 / var(--tw-ring-opacity, 1));
+}
+
+.group.destructive .group-\[\.destructive\]\:focus\:ring-offset-red-600:focus {
+  --tw-ring-offset-color: #dc2626;
+}
+
+.data-\[swipe\=cancel\]\:translate-x-0[data-swipe="cancel"] {
+  --tw-translate-x: 0px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.data-\[swipe\=end\]\:translate-x-\[var\(--radix-toast-swipe-end-x\)\][data-swipe="end"] {
+  --tw-translate-x: var(--radix-toast-swipe-end-x);
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.data-\[swipe\=move\]\:translate-x-\[var\(--radix-toast-swipe-move-x\)\][data-swipe="move"] {
+  --tw-translate-x: var(--radix-toast-swipe-move-x);
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.data-\[swipe\=move\]\:transition-none[data-swipe="move"] {
+  transition-property: none;
+}
+
+.data-\[state\=open\]\:animate-in[data-state="open"] {
+  animation-name: enter;
+  animation-duration: 150ms;
+  --tw-enter-opacity: initial;
+  --tw-enter-scale: initial;
+  --tw-enter-rotate: initial;
+  --tw-enter-translate-x: initial;
+  --tw-enter-translate-y: initial;
+}
+
+.data-\[state\=closed\]\:animate-out[data-state="closed"] {
+  animation-name: exit;
+  animation-duration: 150ms;
+  --tw-exit-opacity: initial;
+  --tw-exit-scale: initial;
+  --tw-exit-rotate: initial;
+  --tw-exit-translate-x: initial;
+  --tw-exit-translate-y: initial;
+}
+
+.data-\[swipe\=end\]\:animate-out[data-swipe="end"] {
+  animation-name: exit;
+  animation-duration: 150ms;
+  --tw-exit-opacity: initial;
+  --tw-exit-scale: initial;
+  --tw-exit-rotate: initial;
+  --tw-exit-translate-x: initial;
+  --tw-exit-translate-y: initial;
+}
+
+.data-\[state\=closed\]\:fade-out-80[data-state="closed"] {
+  --tw-exit-opacity: 0.8;
+}
+
+.data-\[state\=closed\]\:slide-out-to-right-full[data-state="closed"] {
+  --tw-exit-translate-x: 100%;
+}
+
+.data-\[state\=open\]\:slide-in-from-top-full[data-state="open"] {
+  --tw-enter-translate-y: -100%;
+}
+
+@media (min-width: 640px) {
+
+  .sm\:bottom-0 {
+    bottom: 0px;
+  }
+
+  .sm\:right-0 {
+    right: 0px;
+  }
+
+  .sm\:top-auto {
+    top: auto;
+  }
+
+  .sm\:inline {
+    display: inline;
+  }
+
+  .sm\:flex-row {
+    flex-direction: row;
+  }
+
+  .sm\:flex-col {
+    flex-direction: column;
+  }
+
+  .sm\:space-x-6 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(1.5rem * var(--tw-space-x-reverse));
+    margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
+  .sm\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+
+  .data-\[state\=open\]\:sm\:slide-in-from-bottom-full[data-state="open"] {
+    --tw-enter-translate-y: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+
+  .md\:mb-0 {
+    margin-bottom: 0px;
+  }
+
+  .md\:mt-0 {
+    margin-top: 0px;
+  }
+
+  .md\:flex {
+    display: flex;
+  }
+
+  .md\:w-1\/2 {
+    width: 50%;
+  }
+
+  .md\:max-w-\[420px\] {
+    max-width: 420px;
+  }
+
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .md\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .md\:flex-row {
+    flex-direction: row;
+  }
+
+  .md\:justify-start {
+    justify-content: flex-start;
+  }
+
+  .md\:px-6 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .md\:px-8 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .md\:py-32 {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+
+  .md\:py-4 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .md\:text-left {
+    text-align: left;
+  }
+
+  .md\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .md\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+}
+
+@media (min-width: 1024px) {
+
+  .lg\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .lg\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .lg\:space-x-8 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(2rem * var(--tw-space-x-reverse));
+    margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
+  .lg\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+
+  .lg\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}</style></head>
 <body>
-  <header>
-    <div class="container header-container">
-      <div class="logo">
-        <img src="/phone-service-website/img/logo.png" alt="Phone Service Paraná Logo" />
-        <span class="brand-name">Phone Service Paraná</span>
-      </div>
-      <nav>
-        <ul>
-          <li><a href="#inicio">Inicio</a></li>
-          <li><a href="#servicios">Servicios</a></li>
-          <li><a href="#por-que-elegirnos">Por qué elegirnos</a></li>
-          <li><a href="#testimonios">Testimonios</a></li>
-          <li><a href="#contacto">Contacto</a></li>
-        </ul>
-      </nav>
-      <div class="social">
-        <a href="https://wa.me/543435010037" target="_blank" class="btn whatsapp">WhatsApp</a>
-        <a href="https://instagram.com/phoneservicepna" target="_blank" class="social-link">Instagram</a>
-        <a href="https://facebook.com/phoneserviceparana" target="_blank" class="social-link">Facebook</a>
-      </div>
-    </div>
-  </header>
-  <main>
-    <section id="inicio" class="banner">
-      <div class="banner-content">
-        <h1>Servicio Técnico Especializado en Apple</h1>
-        <p>Reparamos tus dispositivos Apple con la máxima calidad y garantía.</p>
-        <a href="#servicios" class="btn primary-btn">Nuestros Servicios</a>
-        <a href="#contacto" class="btn secondary-btn">Solicitar Presupuesto</a>
-      </div>
-      <div class="banner-image">
-        <img src="/phone-service-website/img/banner.jpg" alt="Técnico reparando dispositivo Apple" />
-      </div>
-    </section>
-  </main>
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 Phone Service Paraná. Todos los derechos reservados.</p>
-    </div>
-  </footer>
-  <script src="/phone-service-website/js/script.js"></script>
-</body>
-</html>
+<div id="root"><div class="min-h-screen bg-[#f5f5f7]"><header class="sticky top-0 z-50 bg-white shadow-md"><div class="container mx-auto px-4 py-3 flex justify-between items-center"><div class="flex items-center" style="opacity: 1; transform: none;"><img alt="Phone Service Parana Logo" class="h-10 mr-3" src="img/banner.jpg"/><span class="text-[#1d1d1f] text-xl md:text-2xl font-medium hidden sm:inline">Phone Service Parana</span></div><nav class="hidden md:flex space-x-6 lg:space-x-8"><a class="text-[#1d1d1f] hover:text-[#2997ff] transition-colors text-sm lg:text-base" href="https://4c6e6b4a-79a1-404f-8522-c9378a5293e5.dev13.app-preview.com/#inicio" style="transform: none;" tabindex="0">Inicio</a><a class="text-[#1d1d1f] hover:text-[#2997ff] transition-colors text-sm lg:text-base" href="https://4c6e6b4a-79a1-404f-8522-c9378a5293e5.dev13.app-preview.com/#servicios" style="transform: none;" tabindex="0">Servicios</a><a class="text-[#1d1d1f] hover:text-[#2997ff] transition-colors text-sm lg:text-base" href="https://4c6e6b4a-79a1-404f-8522-c9378a5293e5.dev13.app-preview.com/#por-qu%C3%A9-elegirnos" style="transform: none;" tabindex="0">Por qué elegirnos</a><a class="text-[#1d1d1f] hover:text-[#2997ff] transition-colors text-sm lg:text-base" href="https://4c6e6b4a-79a1-404f-8522-c9378a5293e5.dev13.app-preview.com/#testimonios" style="transform: none;" tabindex="0">Testimonios</a><a class="text-[#1d1d1f] hover:text-[#2997ff] transition-colors text-sm lg:text-base" href="https://4c6e6b4a-79a1-404f-8522-c9378a5293e5.dev13.app-preview.com/#contacto" style="transform: none;" tabindex="0">Contacto</a></nav><button class="inline-flex items-center justify-center rounded-md font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 bg-[#2997ff] hover:bg-[#0071e3] text-white px-4 py-2 md:px-6 text-sm lg:text-base">Contáctanos</button></div></header><main><section class="relative" id="inicio"><div class="bg-gradient-to-r from-[#000000] to-[#1d1d1f] py-24 md:py-32"><div class="container mx-auto px-4"><div class="flex flex-col md:flex-row items-center"><div class="md:w-1/2 mb-10 md:mb-0 text-center md:text-left" style="opacity: 1; transform: none;"><h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">Servicio Técnico <span class="text-[#2997ff]">Especializado en Apple</span></h1><p class="text-lg text-gray-300 mb-8">En Phone Service Paraná, reparamos tus dispositivos Apple con la máxima calidad y garantía. Contamos con técnicos altamente capacitados para brindarte soluciones rápidas y eficaces, con la mejor calidad en repuestos.</p><div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start"><button class="inline-flex items-center justify-center rounded-md font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 bg-[#2997ff] hover:bg-[#0071e3] text-white text-lg py-3 px-6 md:py-4 md:px-8">Nuestros Servicios</button><button class="inline-flex items-center justify-center rounded-md font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border bg-background h-10 border-white text-white hover:bg-white hover:text-black text-lg py-3 px-6 md:py-4 md:px-8">Solicitar Presupuesto</button></div></div><div class="md:w-1/2 mt-10 md:mt-0" style="opacity: 1; transform: none;"><div class="relative"><img alt="Técnico experto reparando un dispositivo Apple en Phone Service Paraná" class="rounded-lg shadow-2xl mx-auto" src="img/banner.jpg"/></div></div></div></div></div></section><section class="py-20 bg-white" id="servicios"><div class="container mx-auto px-4"><div class="text-center mb-16" style="opacity: 1; transform: none;"><h2 class="text-3xl md:text-5xl font-bold text-[#1d1d1f] mb-4">Nuestros Servicios</h2><p class="text-lg text-gray-600 max-w-3xl mx-auto">Ofrecemos una amplia gama de servicios para todos tus dispositivos Apple, desde reparaciones de hardware hasta soluciones de software.</p></div><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"><div class="bg-[#f5f5f7] rounded-xl p-8 shadow-sm hover:shadow-lg transition-shadow duration-300 ease-in-out" style="opacity: 1; transform: none;"><div class="mb-4 flex justify-center md:justify-start"><svg class="w-10 h-10 text-[#2997ff]" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><rect height="20" rx="2" ry="2" width="14" x="5" y="2"></rect><path d="M12 18h.01"></path></svg></div><h3 class="text-xl font-semibold text-[#1d1d1f] mb-3 text-center md:text-left">Reparación de iPhone</h3><p class="text-gray-600 text-center md:text-left">Reparamos pantallas, baterías, cámaras y cualquier otro componente de tu iPhone con repuestos de alta calidad.</p></div><div class="bg-[#f5f5f7] rounded-xl p-8 shadow-sm hover:shadow-lg transition-shadow duration-300 ease-in-out" style="opacity: 1; transform: none;"><div class="mb-4 flex justify-center md:justify-start"><svg class="w-10 h-10 text-[#2997ff]" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M20 16V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v9m16 0H4m16 0 1.28 2.55a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45L4 16"></path></svg></div><h3 class="text-xl font-semibold text-[#1d1d1f] mb-3 text-center md:text-left">Servicio para MacBook</h3><p class="text-gray-600 text-center md:text-left">Solucionamos problemas de hardware y software en tu MacBook, incluyendo reemplazo de teclados, pantallas y baterías.</p></div><div class="bg-[#f5f5f7] rounded-xl p-8 shadow-sm hover:shadow-lg transition-shadow duration-300 ease-in-out" style="opacity: 1; transform: none;"><div class="mb-4 flex justify-center md:justify-start"><svg class="w-10 h-10 text-[#2997ff]" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><rect height="14" rx="2" width="20" x="2" y="3"></rect><line x1="8" x2="16" y1="21" y2="21"></line><line x1="12" x2="12" y1="17" y2="21"></line></svg></div><h3 class="text-xl font-semibold text-[#1d1d1f] mb-3 text-center md:text-left">Reparación de iMac</h3><p class="text-gray-600 text-center md:text-left">Nuestros técnicos están capacitados para reparar cualquier modelo de iMac, desde problemas de pantalla hasta actualizaciones de hardware.</p></div><div class="bg-[#f5f5f7] rounded-xl p-8 shadow-sm hover:shadow-lg transition-shadow duration-300 ease-in-out" style="opacity: 1; transform: none;"><div class="mb-4 flex justify-center md:justify-start"><svg class="w-10 h-10 text-[#2997ff]" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg></div><h3 class="text-xl font-semibold text-[#1d1d1f] mb-3 text-center md:text-left">Recuperación de datos</h3><p class="text-gray-600 text-center md:text-left">Recuperamos tus datos importantes de dispositivos dañados o que no funcionan correctamente.</p></div><div class="bg-[#f5f5f7] rounded-xl p-8 shadow-sm hover:shadow-lg transition-shadow duration-300 ease-in-out" style="opacity: 1; transform: none;"><div class="mb-4 flex justify-center md:justify-start"><svg class="w-10 h-10 text-[#2997ff]" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg></div><h3 class="text-xl font-semibold text-[#1d1d1f] mb-3 text-center md:text-left">Diagnóstico gratuito</h3><p class="text-gray-600 text-center md:text-left">Ofrecemos un diagnóstico completo y gratuito para identificar el problema de tu dispositivo antes de proceder con la reparación.</p></div><div class="bg-[#f5f5f7] rounded-xl p-8 shadow-sm hover:shadow-lg transition-shadow duration-300 ease-in-out" style="opacity: 1; transform: none;"><div class="mb-4 flex justify-center md:justify-start"><svg class="w-10 h-10 text-[#2997ff]" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></div><h3 class="text-xl font-semibold text-[#1d1d1f] mb-3 text-center md:text-left">Servicio express</h3><p class="text-gray-600 text-center md:text-left">Para reparaciones urgentes, contamos con un servicio express que garantiza la reparación en el mismo día.</p></div></div></div></section><section class="py-20 bg-[#1d1d1f] text-white" id="por-qué-elegirnos"><div class="container mx-auto px-4"><div class="text-center mb-16" style="opacity: 1; transform: none;"><h2 class="text-3xl md:text-5xl font-bold mb-4">¿Por qué elegirnos?</h2><p class="text-lg text-gray-300 max-w-3xl mx-auto">Nos diferenciamos por nuestra experiencia, calidad y compromiso con la satisfacción del cliente.</p></div><div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center"><div class="flex flex-col justify-center" style="opacity: 1; transform: none;"><div class="mb-8 last:mb-0" style="opacity: 1; transform: none;"><h3 class="text-xl font-semibold text-[#2997ff] mb-2">Técnicos certificados</h3><p class="text-gray-300">Nuestro equipo está formado por técnicos certificados con años de experiencia en dispositivos Apple.</p></div><div class="mb-8 last:mb-0" style="opacity: 1; transform: none;"><h3 class="text-xl font-semibold text-[#2997ff] mb-2">Repuestos originales</h3><p class="text-gray-300">Utilizamos únicamente repuestos originales o de la más alta calidad para garantizar el rendimiento óptimo.</p></div><div class="mb-8 last:mb-0" style="opacity: 1; transform: none;"><h3 class="text-xl font-semibold text-[#2997ff] mb-2">Garantía en reparaciones</h3><p class="text-gray-300">Todas nuestras reparaciones incluyen garantía para que tengas total tranquilidad.</p></div><div class="mb-8 last:mb-0" style="opacity: 1; transform: none;"><h3 class="text-xl font-semibold text-[#2997ff] mb-2">Atención personalizada</h3><p class="text-gray-300">Te ofrecemos un trato personalizado y te mantenemos informado durante todo el proceso de reparación.</p></div></div><div class="relative" style="opacity: 1; transform: none;"><img alt="Taller de reparación de dispositivos Apple" class="rounded-lg shadow-xl mx-auto" src="img/banner.jpg"/></div></div></div></section><section class="py-20 bg-[#f5f5f7]" id="testimonios"><div class="container mx-auto px-4"><div class="text-center mb-16" style="opacity: 1; transform: none;"><h2 class="text-3xl md:text-5xl font-bold text-[#1d1d1f] mb-4">Lo que dicen nuestros clientes</h2><p class="text-lg text-gray-600 max-w-3xl mx-auto">La satisfacción de nuestros clientes es nuestra mejor carta de presentación.</p></div><div class="grid grid-cols-1 md:grid-cols-3 gap-8"><div class="bg-white rounded-xl p-8 shadow-sm hover:shadow-lg transition-shadow duration-300 ease-in-out flex flex-col" style="opacity: 1; transform: none;"><div class="flex items-center mb-4"><div class="w-12 h-12 bg-[#2997ff] rounded-full flex items-center justify-center text-white font-bold text-xl">C</div><div class="ml-4"><h3 class="text-lg font-semibold text-[#1d1d1f]">Carlos Rodríguez</h3><p class="text-gray-500">Diseñador Gráfico</p></div></div><p class="text-gray-600 italic flex-grow">"Repararon mi MacBook Pro en tiempo récord. El servicio fue excelente y el precio muy razonable. Totalmente recomendable."</p></div><div class="bg-white rounded-xl p-8 shadow-sm hover:shadow-lg transition-shadow duration-300 ease-in-out flex flex-col" style="opacity: 1; transform: none;"><div class="flex items-center mb-4"><div class="w-12 h-12 bg-[#2997ff] rounded-full flex items-center justify-center text-white font-bold text-xl">L</div><div class="ml-4"><h3 class="text-lg font-semibold text-[#1d1d1f]">Laura Martínez</h3><p class="text-gray-500">Fotógrafa</p></div></div><p class="text-gray-600 italic flex-grow">"Mi iPhone tenía la pantalla rota y pensé que había perdido todas mis fotos. No solo repararon la pantalla sino que también recuperaron todas mis fotos. ¡Increíble servicio!"</p></div><div class="bg-white rounded-xl p-8 shadow-sm hover:shadow-lg transition-shadow duration-300 ease-in-out flex flex-col" style="opacity: 1; transform: none;"><div class="flex items-center mb-4"><div class="w-12 h-12 bg-[#2997ff] rounded-full flex items-center justify-center text-white font-bold text-xl">M</div><div class="ml-4"><h3 class="text-lg font-semibold text-[#1d1d1f]">Miguel Sánchez</h3><p class="text-gray-500">Empresario</p></div></div><p class="text-gray-600 italic flex-grow">"He probado varios servicios técnicos, pero ninguno como este. Profesionales, rápidos y con un trato excelente. Mi iMac funciona mejor que nunca."</p></div></div></div></section><section class="py-20 bg-white" id="contacto"><div class="container mx-auto px-4"><div class="text-center mb-16" style="opacity: 1; transform: none;"><h2 class="text-3xl md:text-5xl font-bold text-[#1d1d1f] mb-4">Contáctanos</h2><p class="text-lg text-gray-600 max-w-3xl mx-auto">Estamos aquí para ayudarte. Contáctanos para obtener más información o solicitar un presupuesto.</p></div><div class="grid grid-cols-1 lg:grid-cols-2 gap-12"><div style="opacity: 1; transform: none;"><form class="space-y-6"><div class="grid grid-cols-1 md:grid-cols-2 gap-6"><div><label class="block text-sm font-medium text-gray-700 mb-1" for="name">Nombre</label><input class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#2997ff]" id="name" name="name" placeholder="Tu nombre" required="" type="text"/></div><div><label class="block text-sm font-medium text-gray-700 mb-1" for="email">Email</label><input class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#2997ff]" id="email" name="email" placeholder="tu@email.com" required="" type="email"/></div></div><div><label class="block text-sm font-medium text-gray-700 mb-1" for="phone">Teléfono</label><input class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#2997ff]" id="phone" name="phone" placeholder="Tu número de teléfono" type="tel"/></div><div><label class="block text-sm font-medium text-gray-700 mb-1" for="device">Dispositivo</label><select class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#2997ff]" id="device" name="device"><option value="">Selecciona tu dispositivo</option><option value="iphone">iPhone</option><option value="macbook">MacBook</option><option value="imac">iMac</option><option value="ipad">iPad</option><option value="watch">Apple Watch</option><option value="other">Otro</option></select></div><div><label class="block text-sm font-medium text-gray-700 mb-1" for="message">Mensaje</label><textarea class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#2997ff]" id="message" name="message" placeholder="Describe el problema de tu dispositivo" required="" rows="4"></textarea></div><button class="inline-flex items-center justify-center rounded-md font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 w-full bg-[#2997ff] hover:bg-[#0071e3] text-white py-3 text-lg" type="submit">Enviar Mensaje</button></form></div><div class="space-y-8" style="opacity: 1; transform: none;"><div><h3 class="text-2xl font-semibold text-[#1d1d1f] mb-4">Información de Contacto</h3><div class="space-y-4"><div class="flex items-start"><svg class="w-5 h-5 text-[#2997ff] mt-1 mr-3 shrink-0" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg><div><p class="font-medium">Teléfono</p><p class="text-gray-600">+54 343 123 4567</p></div></div><div class="flex items-start"><svg class="w-5 h-5 text-[#2997ff] mt-1 mr-3 shrink-0" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><rect height="16" rx="2" width="20" x="2" y="4"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg><div><p class="font-medium">Email</p><p class="text-gray-600">info@phoneserviceparana.com</p></div></div><div class="flex items-start"><svg class="w-5 h-5 text-[#2997ff] mt-1 mr-3 shrink-0" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg><div><p class="font-medium">Dirección</p><p class="text-gray-600">Calle Falsa 123, Paraná, Entre Ríos</p></div></div><div class="flex items-start"><svg class="w-5 h-5 text-[#2997ff] mt-1 mr-3 shrink-0" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg><div><p class="font-medium">Horario</p><p class="text-gray-600">Lunes a Viernes: 9:00 - 18:00</p><p class="text-gray-600">Sábados: 9:00 - 13:00</p></div></div></div></div><div><h3 class="text-2xl font-semibold text-[#1d1d1f] mb-4">Síguenos</h3><div class="flex space-x-4"><a aria-label="Síguenos en facebook" class="w-10 h-10 rounded-full bg-[#1d1d1f] flex items-center justify-center text-white hover:bg-[#2997ff] transition-colors" href="https://4c6e6b4a-79a1-404f-8522-c9378a5293e5.dev13.app-preview.com/#"><svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24"><path clip-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" fill-rule="evenodd"></path></svg></a><a aria-label="Síguenos en twitter" class="w-10 h-10 rounded-full bg-[#1d1d1f] flex items-center justify-center text-white hover:bg-[#2997ff] transition-colors" href="https://4c6e6b4a-79a1-404f-8522-c9378a5293e5.dev13.app-preview.com/#"><svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24"><path d="M22.46 6c-.77.35-1.6.58-2.46.67.9-.53 1.58-1.37 1.9-2.37-.84.5-1.77.86-2.77 1.05-.79-.84-1.92-1.36-3.14-1.36-2.38 0-4.3 1.92-4.3 4.3 0 .34.04.67.11.98-3.57-.18-6.73-1.89-8.85-4.48-.37.63-.58 1.37-.58 2.15 0 1.49.76 2.81 1.91 3.58-.71 0-1.37-.22-1.95-.54v.05c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.94.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.01-.06A12.075 12.075 0 0 0 8.81 21c7.3 0 11.28-6.06 11.28-11.28l-.01-.51c.78-.56 1.45-1.26 1.98-2.03z"></path></svg></a><a aria-label="Síguenos en instagram" class="w-10 h-10 rounded-full bg-[#1d1d1f] flex items-center justify-center text-white hover:bg-[#2997ff] transition-colors" href="https://4c6e6b4a-79a1-404f-8522-c9378a5293e5.dev13.app-preview.com/#"><svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24"><path clip-rule="evenodd" d="M12 2C8.74 2 8.333.014 7.053.072 5.775.132 4.905.333 4.14.63c-.784.305-1.48.77-2.174 1.465-.695.694-1.16 1.39-1.465 2.174C.333 4.905.131 5.775.072 7.053.014 8.333 0 8.74 0 12s.014 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.305.784.77 1.48 1.465 2.174.694.695 1.39 1.16 2.174 1.465.765.297 1.636.499 2.913.558C8.333 23.986 8.74 24 12 24s3.667-.014 4.947-.072c1.277-.06 2.148-.262 2.913-.558.784-.305 1.48-.77 2.174-1.465.695-.694 1.16-1.39 1.465-2.174.297-.765.499-1.636.558-2.913.06-1.277.072-1.61.072-4.947s-.014-3.667-.072-4.947c-.06-1.277-.262-2.148-.558-2.913-.305-.784-.77-1.48-1.465-2.174C20.609.833 19.913.369 19.139.072 18.374.333 17.504.131 16.947.072 15.667.014 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.056 1.17-.25 1.805-.414 2.227-.218.562-.479.96-.897 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.056-1.816-.25-2.236-.414-.562-.218-.96-.479-1.381-.897-.419-.419-.679-.824-.896-1.38-.165-.42-.359-1.065-.413-2.235-.055-1.274-.071-1.649-.071-4.859 0-3.211.016-3.586.071-4.859.054-1.171.248-1.816.413-2.236.217-.562.477-.96.896-1.381.42-.419.819-.679 1.381-.896.422-.165 1.057-.36 2.227-.413 1.265-.057 1.646-.071 4.85-.071zm0 5.42c-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3-1.343-3-3-3zm0 4.96c-.973 0-1.76-.787-1.76-1.76s.787-1.76 1.76-1.76 1.76.787 1.76 1.76-.787 1.76-1.76 1.76zm4.905-7.23c-.69 0-1.25-.56-1.25-1.25s.56-1.25 1.25-1.25 1.25.56 1.25 1.25-.56 1.25-1.25 1.25z" fill-rule="evenodd"></path></svg></a></div></div></div></div></div></section></main><footer class="bg-[#1d1d1f] text-white py-12"><div class="container mx-auto px-4"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8"><div><img alt="Phone Service Parana Logo" class="h-10 mb-3" src="img/banner.jpg"/><span class="text-xl font-medium">Phone Service Parana</span><p class="mt-4 text-gray-400 text-sm">Servicio técnico especializado en dispositivos Apple. Calidad, garantía y profesionalidad en Paraná.</p></div><div><span class="text-lg font-medium mb-4 block">Enlaces rápidos</span><ul class="space-y-2"><li><a class="text-gray-400 hover:text-[#2997ff] transition-colors text-sm" href="https://4c6e6b4a-79a1-404f-8522-c9378a5293e5.dev13.app-preview.com/#inicio">Inicio</a></li><li><a class="text-gray-400 hover:text-[#2997ff] transition-colors text-sm" href="https://4c6e6b4a-79a1-404f-8522-c9378a5293e5.dev13.app-preview.com/#servicios">Servicios</a></li><li><a class="text-gray-400 hover:text-[#2997ff] transition-colors text-sm" href="https://4c6e6b4a-79a1-404f-8522-c9378a5293e5.dev13.app-preview.com/#por-qu%C3%A9-elegirnos">Por qué elegirnos</a></li><li><a class="text-gray-400 hover:text-[#2997ff] transition-colors text-sm" href="https://4c6e6b4a-79a1-404f-8522-c9378a5293e5.dev13.app-preview.com/#testimonios">Testimonios</a></li><li><a class="text-gray-400 hover:text-[#2997ff] transition-colors text-sm" href="https://4c6e6b4a-79a1-404f-8522-c9378a5293e5.dev13.app-preview.com/#contacto">Contacto</a></li></ul></div><div><span class="text-lg font-medium mb-4 block">Servicios</span><ul class="space-y-2"><li><a class="text-gray-400 hover:text-[#2997ff] transition-colors text-sm" href="https://4c6e6b4a-79a1-404f-8522-c9378a5293e5.dev13.app-preview.com/#servicios">Reparación de iPhone</a></li><li><a class="text-gray-400 hover:text-[#2997ff] transition-colors text-sm" href="https://4c6e6b4a-79a1-404f-8522-c9378a5293e5.dev13.app-preview.com/#servicios">Servicio para MacBook</a></li><li><a class="text-gray-400 hover:text-[#2997ff] transition-colors text-sm" href="https://4c6e6b4a-79a1-404f-8522-c9378a5293e5.dev13.app-preview.com/#servicios">Reparación de iMac</a></li><li><a class="text-gray-400 hover:text-[#2997ff] transition-colors text-sm" href="https://4c6e6b4a-79a1-404f-8522-c9378a5293e5.dev13.app-preview.com/#servicios">Recuperación de datos</a></li><li><a class="text-gray-400 hover:text-[#2997ff] transition-colors text-sm" href="https://4c6e6b4a-79a1-404f-8522-c9378a5293e5.dev13.app-preview.com/#servicios">Diagnóstico gratuito</a></li></ul></div><div><span class="text-lg font-medium mb-4 block">Contacto</span><ul class="space-y-3"><li class="flex items-center"><svg class="w-4 h-4 text-[#2997ff] mr-2 shrink-0" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg><span class="text-gray-400 text-sm">+54 343 123 4567</span></li><li class="flex items-center"><svg class="w-4 h-4 text-[#2997ff] mr-2 shrink-0" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><rect height="16" rx="2" width="20" x="2" y="4"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg><span class="text-gray-400 text-sm">info@phoneserviceparana.com</span></li><li class="flex items-center"><svg class="w-4 h-4 text-[#2997ff] mr-2 shrink-0" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg><span class="text-gray-400 text-sm">Calle Falsa 123, Paraná, Entre Ríos</span></li></ul></div></div><div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center"><p class="text-gray-400 text-xs sm:text-sm">© 2025 Phone Service Parana. Todos los derechos reservados.</p><div class="mt-4 md:mt-0"><ul class="flex space-x-4 sm:space-x-6"><li><a class="text-gray-400 hover:text-[#2997ff] transition-colors text-xs sm:text-sm" href="https://4c6e6b4a-79a1-404f-8522-c9378a5293e5.dev13.app-preview.com/#">Política de Privacidad</a></li><li><a class="text-gray-400 hover:text-[#2997ff] transition-colors text-xs sm:text-sm" href="https://4c6e6b4a-79a1-404f-8522-c9378a5293e5.dev13.app-preview.com/#">Términos y Condiciones</a></li></ul></div></div></div></footer><div aria-label="Notifications (F8)" role="region" style="pointer-events: none;" tabindex="-1"><ol class="fixed top-0 z-[100] flex max-h-screen w-full flex-col-reverse p-4 sm:bottom-0 sm:right-0 sm:top-auto sm:flex-col md:max-w-[420px]" tabindex="-1"></ol></div></div></div>
+
+</body></html>
